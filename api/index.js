@@ -15,6 +15,8 @@ export default (req, res) => {
     if (!options) {
         res.send({body: "No arguments provided"})
     }
+    res.setHeader('content-type', 'image/svg+xml')
+
     res.send(`${generate(options)}`);
 
 }
